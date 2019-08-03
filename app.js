@@ -47,3 +47,16 @@ let friends = [
 for(let i = 0; i < friends.length; i++) {
   checkAge(friends[i].name, friends[i].age);
 }
+
+function getLength(word) {
+  if (word.length % 2 === 0) {
+    console.log('The world is nice and even.');
+    }  else {
+      console.log('The world is an odd place.');
+    }
+}
+
+getLength('Hello World');
+
+
+  
