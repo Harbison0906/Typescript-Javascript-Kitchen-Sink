@@ -1,21 +1,21 @@
 //variable for my name//
-let myName = 'Seth';
+let myName: string = 'Seth';
 
 //constant for number of U.S. states//
-const states = 50;
+const states: number = 50;
 
 //variabe for sum of 5 and 4//
-let sum = 5 + 4;
+let sum: number = 5 + 4;
 
 //alert window says 'Hello World!//
-function sayHello() {
+function sayHello(): any {
   alert('Hello World!');
 }
 
 sayHello();
 
 //alert window notifies if user is under 21//
-function checkAge(name, age) {
+function checkAge(name: string, age: number) {
   if (age < 21) {
     alert("Sorry "+ name + ", you are not old enough to view this page!")
   }
@@ -27,16 +27,21 @@ checkAge('James', 18);
 checkAge('John', 17);
 
 //display favorite vegetables in console//
-let favVeggies = ['green peppers', 'asparagus', 'onions', 'potatoes', 'squash'];
+let favVeggies: string[] = ['green peppers', 'asparagus', 'onions', 'potatoes', 'squash'];
 
-let count = 0;
+let count: number = 0;
 
 while(count < favVeggies.length) {
   console.log(favVeggies[count]);
   count++;
 }
 
-let friends = [
+interface IPerson {
+  name: string,
+  age: number
+}
+
+let friends: IPerson[] = [
   {name: 'Ryan', age: 23},
   {name: 'Justin', age: 20},
   {name: 'Michael', age: 25},
@@ -48,7 +53,7 @@ for(let i = 0; i < friends.length; i++) {
   checkAge(friends[i].name, friends[i].age);
 }
 
-function getLength(word) {
+function getLength(word: string) {
   if (word.length % 2 === 0) {
     console.log('The world is nice and even.');
     }  else {
